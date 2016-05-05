@@ -1,0 +1,23 @@
+{
+  "name": "doctorjuno",
+  "homepage": "https://github.com/jacksoncafazzo/doctorjuno",
+  "authors": [
+    "Jackson Cafazzo <doctorjuno@gmail.com>"
+  ],
+  "description": "doctorjunomakeswebsites",
+  "main": "",
+  "keywords": [
+    "dr_juno"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Materialize": "materialize#^0.97.6"
+  }
+}

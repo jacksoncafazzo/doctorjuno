@@ -1,5 +1,9 @@
 ﻿[
   {
+    "outputFile": "wwwroot/lib/jquery.es5.js",
+    "inputFile": "bower_components/jquery/dist/jquery.js"
+  },
+  {
     "outputFile": "wwwroot/lib/materialize.es5.js",
     "inputFile": "bower_components/Materialize/dist/js/materialize.js"
   },
@@ -8,11 +12,11 @@
     "inputFile": "bower_components/Materialize/sass/materialize.scss"
   },
   {
-    "outputFile": "wwwroot/lib/jquery.es5.js",
-    "inputFile": "bower_components/jquery/dist/jquery.js"
+    "outputFile": "wwwroot/js/site.es5.js",
+    "inputFile": "wwwroot/js/site.js"
   },
   {
-    "outputFile": "wwwroot/css/site.css",
+    "outputFile": "wwwroot/sass/site.css",
     "inputFile": "wwwroot/sass/site.scss"
   }
 ]

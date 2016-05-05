@@ -37,5 +37,17 @@ namespace WebBook.Controllers
         {
             return View();
         }
+
+        //GET: /Home/Projects
+        public IActionResult Projects()
+        {
+            ViewData["Title"] = "Projects";
+            return View();
+        }
+
+        public IActionResult HelloAjax()
+        {
+            return Content("Hello from the controller!", "text/plain");
+        }
     }
 }
