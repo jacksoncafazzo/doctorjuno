@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNet.Mvc;
+﻿using doctorjuno.Models;
+using Microsoft.AspNet.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,6 +49,22 @@ namespace WebBook.Controllers
         public IActionResult HelloAjax()
         {
             return Content("Hello from the controller!", "text/plain");
+        }
+
+        public IActionResult Sum(int firstNumber, int secondNumber)
+        {
+            return Content((firstNumber + secondNumber).ToString(), "text/plain");
+        }
+
+        public IActionResult DisplayObject()
+        {
+            Destination destination = new Destination("Toyko", "Japan", 1);
+            return Json(destination);
+        }
+
+        public IActionResult DisplayViewWithAjax()
+        {
+            return View();
         }
     }
 }
