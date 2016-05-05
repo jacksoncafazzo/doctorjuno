@@ -9,6 +9,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Data.Entity;
+using doctorjuno.Models;
 
 namespace doctorjuno
 {
@@ -22,6 +23,9 @@ namespace doctorjuno
             var builder = new ConfigurationBuilder()
                 .AddJsonFile("appsettings.json")
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+
+
+                
 
             if (env.IsDevelopment())
             {
@@ -40,6 +44,9 @@ namespace doctorjuno
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddEntityFramework()
+                .AddSqlServer()
+                .AddDbContext<AjaxDemoContext>(options => options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
             services.AddMvc();
         }
 
@@ -48,6 +55,7 @@ namespace doctorjuno
         {
             app.UseIISPlatformHandler();
             app.UseStaticFiles();
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
