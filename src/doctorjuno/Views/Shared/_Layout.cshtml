@@ -31,13 +31,15 @@
         @RenderBody()
     </div>
     <environment names="Development">
-        <script src="~/lib/materialize.es5.js" asp-append-version="false"></script>
         <script src="~/lib/jquery.es5.js" asp-append-version="false"></script>
+        <script src="~/lib/materialize.js" asp-append-version="false"></script>
 
         <script src="~/js/site.js" asp-append-version="false"></script>
     </environment>
     <environment names="Staging,Production">
-
+        <script src="https://code.jquery.com/jquery-2.2.3.min.js"
+                integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="
+                crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"
                 asp-fallback-src="~/lib/materialize.min.js"
                 asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">

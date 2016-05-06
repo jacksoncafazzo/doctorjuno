@@ -1,6 +1,7 @@
 {
   "commands": {
-    "web": "Microsoft.AspNet.Server.Kestrel"
+    "web": "Microsoft.AspNet.Server.Kestrel",
+    "ef": "EntityFramework.Commands"
   },
   "compilationOptions": {
     "emitEntryPoint": true
@@ -14,7 +15,10 @@
     "Microsoft.AspNet.Mvc.ViewFeatures": "6.0.0-rc1-final",
     "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
     "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final",
-    "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0-rc1-final"
+    "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0-rc1-final",
+    "EntityFramework.Core": "7.0.0-rc1-final",
+    "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-final",
+    "EntityFramework.Commands": "7.0.0-rc1-final"
   },
   "exclude": [
     "wwwroot",
