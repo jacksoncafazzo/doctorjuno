@@ -9,10 +9,21 @@ $(document).ready(function () {
 
         document.getElementById("near_bg").style.backgroundPosition = -window.pageYOffset / (5 * speed) + "px " + -window.pageXOffset / (5 * speed) + "px";
     };
-    $("#contact-me]").click(function () {
-        $(parent).animate({ scrollTop: $(parent).scrollTop() + $(element).offset().top - $(parent).offset().top }, { duration: 'slow', easing: 'swing' });
+
+    $('a[href*="#"]:not([href="#"])').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
     });
-    $("#contact-me").click(function () {
+
+    $("#contact_me").click(function () {
         document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
     });
     $(".hello-ajax").click(function () {

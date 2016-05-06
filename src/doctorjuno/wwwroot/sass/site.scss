@@ -1,10 +1,25 @@
-﻿body {
+﻿@import "base/variables";
+
+@font-face {
+    font-family: orator;
+    src: url(../fonts/ufonts.com_orator-regular.ttf);
+}
+
+body, html {
     background-color: #000;
     background-image: url(../img/Far.png);
     background-attachment: fixed;
     min-width: 4000px;
     min-height: 4000px;
     color: lightgray;
+    font-family: 'AR DESTINE';
+
+    h5 {
+        font-family:'EvilGenius BB';
+        background-color: #f6f6f6;
+        color: lighten(black, 2);
+    }
+
     #mid_bg {
         position: fixed;
         z-index: -100;
@@ -27,6 +42,7 @@
         background: linear-gradient(lightgray, #f6f6f6, lighten(dimgray, 2)); /* Standard syntax */
     }
 }
+
 #home {
     position: absolute;
     top: 120px;
